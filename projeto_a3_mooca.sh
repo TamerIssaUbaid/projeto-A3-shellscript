@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Projeto A3 - Menu de Sistema em Shell Script
-# Autor: [Seu Nome ou Nome do Grupo]
+# Grupo:  Támer Issa Ubaid / Felipe Menegazzi / Enyinna Elvis Ugwu / Fabrício Sales Falchet / Carlos Eduardo Basilio Vieira dos Santos / 
+# Marcos Henrique Pereira Nunes  / Poliana Matos
 # Data: 25/05/2025
 
 while true; do
