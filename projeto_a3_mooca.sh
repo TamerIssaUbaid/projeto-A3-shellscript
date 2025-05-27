@@ -8,7 +8,7 @@
 while true; do
     clear
     echo "========= MENU PRINCIPAL ========="
-    echo "1. Contar arquivos com nome contendo uma string em um diretório"
+    echo "1. Contar arquivos com string no nome"
     echo "2. Cadastrar novo usuário"
     echo "3. Buscar usuários por string"
     echo "4. Buscar grupos por string"
