@@ -86,8 +86,8 @@ while true; do
             read -p "Pressione <Enter> para continuar...";;
 
         9)
-            echo "Funcionalidade livre 1: Exibir processos ativos do usuário atual"
-            ps -u $USER
+            echo "Funcionalidade livre 1: Lista todos os usuários no sistema"
+            cat /etc/passwd
             read -p "Pressione <Enter> para continuar...";;
 
         10)
