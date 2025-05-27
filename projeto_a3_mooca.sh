@@ -32,7 +32,7 @@ while true; do
             else
                 echo "Diretório inválido."
             fi
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         2)
             read -p "Digite o nome do novo usuário: " usuario
@@ -41,24 +41,24 @@ while true; do
             else
                 sudo useradd "$usuario" && echo "Usuário $usuario criado com sucesso."
             fi
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         3)
             read -p "Digite a string para buscar em logins: " str
             count=$(cut -d: -f1 /etc/passwd | grep "$str" | wc -l)
             echo "Usuários encontrados: $count"
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         4)
             read -p "Digite a string para buscar em grupos: " str
             count=$(cut -d: -f1 /etc/group | grep "$str" | wc -l)
             echo "Grupos encontrados: $count"
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         5)
             read -p "Digite o IP para verificar: " ip
             ping -c 1 "$ip" &>/dev/null && echo "IP ativo." || echo "IP inativo."
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         6)
             echo "Memória RAM livre:"
@@ -67,7 +67,7 @@ while true; do
             lscpu | grep "Model name" | sed 's/Model name:[ \t]*//'
             echo "Espaço em disco disponível:"
             df -h / | tail -1 | awk '{print $4 " livres"}'
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         7)
             read -p "Digite o caminho completo do arquivo: " arq
@@ -76,24 +76,24 @@ while true; do
             else
                 echo "Arquivo não encontrado."
             fi
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         8)
             u_total=$(cut -d: -f1 /etc/passwd | wc -l)
             g_total=$(cut -d: -f1 /etc/group | wc -l)
             echo "Total de usuários: $u_total"
             echo "Total de grupos: $g_total"
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         9)
             echo "Funcionalidade livre 1: Exibir processos ativos do usuário atual"
             ps -u $USER
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         10)
             echo "Funcionalidade livre 2: Verificar atualizações do sistema (Debian/Ubuntu)"
             sudo apt update
-            read -p "Pressione Enter para continuar...";;
+            read -p "Pressione <Enter> para continuar...";;
 
         11)
             echo "Saindo do sistema. Até mais!"
