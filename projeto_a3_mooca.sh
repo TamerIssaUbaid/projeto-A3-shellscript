@@ -91,8 +91,13 @@ while true; do
             read -p "Pressione <Enter> para continuar...";;
 
         10)
-            echo "Funcionalidade livre 2: Verificar atualizações do sistema (Debian/Ubuntu)"
-            sudo apt update
+            echo "Funcionalidade livre 2: Verificar usuários com senha vazia ou bloqueada"
+            echo "Usuários com senha vazia:"
+            sudo awk -F: '($2 == "") {print " - " $1}' /etc/shadow
+
+            echo "Usuários com senha bloqueada:"
+            sudo awk -F: '($2 ~ /^[!*]/) {print " - " $1}' /etc/shadow
+
             read -p "Pressione <Enter> para continuar...";;
 
         11)
