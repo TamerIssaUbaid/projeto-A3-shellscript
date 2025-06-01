@@ -92,13 +92,38 @@ while true; do
 
         10)
             echo "Funcionalidade livre 2: Verificar usuários com senha vazia ou bloqueada"
-            echo "Usuários com senha vazia:"
-            sudo awk -F: '($2 == "") {print " - " $1}' /etc/shadow
+            echo
 
-            echo "Usuários com senha bloqueada:"
-            sudo awk -F: '($2 ~ /^[!*]/) {print " - " $1}' /etc/shadow
+            # Usuários com senha vazia
+            echo "Usuários com senha **vazia**:"
+            usuarios_vazios=$(awk -F: '($2 == "") {print $1}' /etc/shadow)
 
-            read -p "Pressione <Enter> para continuar...";;
+            if [ -z "$usuarios_vazios" ]; then
+                echo " - Nenhum usuário com senha vazia encontrado."
+            else
+                echo "$usuarios_vazios" | while read usuario; do
+                    echo " - $usuario"
+                done
+            fi
+
+            echo
+
+            # Usuários com senha bloqueada
+            echo "Usuários com senha **bloqueada**:"
+            usuarios_bloqueados=$(awk -F: '($2 ~ /^[!*]/) {print $1}' /etc/shadow)
+
+            if [ -z "$usuarios_bloqueados" ]; then
+                echo " - Nenhum usuário com senha bloqueada encontrado."
+            else
+                echo "$usuarios_bloqueados" | while read usuario; do
+                    echo " - $usuario"
+                done
+            fi
+
+            echo
+            read -p "Pressione <Enter> para continuar..."
+            ;;
+
 
         11)
             echo "Saindo do sistema. Até mais!"
