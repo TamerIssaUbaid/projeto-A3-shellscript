@@ -1,7 +1,7 @@
 # 📌 Menu Interativo em Shell Script
 
 ![Shell Script](https://img.shields.io/badge/Shell_Script-Bash-green?logo=gnu-bash&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Em%20Completo-yellow)
+![Status](https://img.shields.io/badge/Status-%20Completo-yellow)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 > Projeto desenvolvido como parte da disciplina de **Sistemas Computacionais** na faculdade, com o objetivo de automatizar tarefas utilizando **Shell Script**.
