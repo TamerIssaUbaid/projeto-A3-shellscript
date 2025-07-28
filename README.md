@@ -42,3 +42,8 @@ cd projeto-A3-shellscript
 ```bash
 chmod +x menu.sh
 
+```
+**Execute o script diretamente:**
+```bash
+./menu.sh
+
